@@ -1,7 +1,7 @@
 const arr = [1, 4, 2, 7, 3, 88, 4, 5, 9];
 
 function sorting(arr) {
-  if (arr.length > 0) {
+  if (arr.length === 0) {
     return arr;
   }
 
@@ -9,11 +9,11 @@ function sorting(arr) {
   let left = [];
   let right = [];
 
-  for (let i = 0; i <= arr.length - 1; i--) {
-    if (pivot > arr[i]) {
-      right.push(arr[i]);
-    } else {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
       left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
     }
   }
 
